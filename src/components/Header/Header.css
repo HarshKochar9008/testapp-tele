@@ -1,0 +1,179 @@
+.header {
+    /* background-color: #0A1C05; */
+    display: flex;
+    align-items: center;
+    height: 60px;
+    justify-content: space-between;
+    padding: 10px 16px;
+    /* position: fixed;
+    width: 100%; */
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 28px;
+    margin-right: 8px;
+    width: 91px;
+  }
+
+.header-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.subuser-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-width: 160px;
+}
+
+.subuser-dropdown.empty {
+    justify-content: flex-end;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.subuser-dropdown-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: linear-gradient(135deg, rgba(33, 56, 24, 0.92), rgba(16, 28, 11, 0.92));
+    color: #f4fce3;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.subuser-dropdown.open .subuser-dropdown-trigger,
+.subuser-dropdown-trigger:hover {
+    border-color: rgba(164, 241, 99, 0.55);
+    transform: translateY(-1px);
+}
+
+.subuser-dropdown-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.subuser-dropdown-arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid rgba(164, 241, 99, 0.8);
+    border-bottom: 2px solid rgba(164, 241, 99, 0.8);
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+}
+
+.subuser-dropdown.open .subuser-dropdown-arrow {
+    transform: rotate(-135deg);
+}
+
+.subuser-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: max-content;
+    min-width: 180px;
+    background: rgba(10, 19, 7, 0.95);
+    border: 1px solid rgba(164, 241, 99, 0.25);
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+    z-index: 100;
+    animation: dropdownFadeIn 0.2s ease forwards;
+}
+
+.subuser-dropdown-item {
+    width: 100%;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    color: rgba(244, 252, 227, 0.92);
+    text-align: left;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.subuser-dropdown-item:hover,
+.subuser-dropdown-item:focus {
+    background: rgba(164, 241, 99, 0.12);
+    color: #e6ffb4;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.icons-section {
+    display: flex;
+    gap: 16px;
+}
+
+/* 1. Turn the button into a 1×1 grid */
+.icon-button {
+    display: grid;
+    grid-template-areas: "icon";
+    width: fit-content;    /* shrink‐wrap to its contents */
+    height: fit-content;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* 2. Put the bell (or earnings) image into that grid cell */
+  .icon-button img {
+    grid-area: icon;
+    display: block;        /* no inline whitespace */
+    width: 22px;
+    height: 27px;
+  }
+  
+  /* 3. Overlay the unread badge in the same cell, top-right corner */
+  .unread-count {
+    grid-area: icon;
+    justify-self: end;     /* right edge */
+    align-self: start;     /* top edge */
+    transform: translate(25%, -25%); /* nudge it just outside */
+  
+    /* badge styling */
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    line-height: 1;
+    min-width: 14px;       /* for 1–2 digits */
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0 4px;
+  }
+  

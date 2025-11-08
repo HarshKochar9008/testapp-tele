@@ -1,0 +1,181 @@
+/* Modern Feature Walkthrough Styles - Enhanced for new floating tooltip design */
+
+/* This file now serves as a backup/fallback for FeatureWalkthrough specific styles */
+/* The main styling is handled by the updated CustomTour component */
+
+/* Feature-specific highlight animations */
+.feature-walkthrough-active {
+  position: relative;
+  z-index: 9999;
+}
+
+/* Enhanced highlighting for specific feature elements */
+.dashboard-feature.tour-highlight {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+  box-shadow: 
+    0 0 0 4px #667eea,
+    0 0 0 8px rgba(102, 126, 234, 0.3),
+    0 0 20px rgba(102, 126, 234, 0.6);
+  border-radius: 12px;
+  animation: featurePulse 2s infinite ease-in-out;
+}
+
+@keyframes featurePulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 0 4px #667eea,
+      0 0 0 8px rgba(102, 126, 234, 0.3),
+      0 0 20px rgba(102, 126, 234, 0.6);
+  }
+  50% {
+    box-shadow: 
+      0 0 0 6px #667eea,
+      0 0 0 12px rgba(102, 126, 234, 0.4),
+      0 0 30px rgba(102, 126, 234, 0.8);
+  }
+}
+
+/* Special styling for footer navigation items */
+.footer-item.tour-highlight {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  background: rgba(102, 126, 234, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Enhanced game button highlighting */
+.game-button.tour-highlight {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+  border-radius: 16px;
+  background: rgba(102, 126, 234, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Progress circle highlighting */
+.circular-progress-wrapper.tour-highlight {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  background: rgba(102, 126, 234, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Stats box highlighting */
+.stats-box.tour-highlight {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  background: rgba(102, 126, 234, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Page-specific feature highlights */
+.hero-section.tour-highlight {
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+  border-radius: 16px;
+  background: rgba(102, 126, 234, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.wallet-info-bar.tour-highlight {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  background: rgba(102, 126, 234, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.connect-wallet-btn.tour-highlight {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  background: rgba(102, 126, 234, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.claim-section.tour-highlight,
+.withdraw-section.tour-highlight,
+[class*="claim"].tour-highlight,
+[class*="withdraw"].tour-highlight {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  background: rgba(102, 126, 234, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.tokenomics-content.tour-highlight,
+.whitepaper-content.tour-highlight,
+[class*="tokenomics"].tour-highlight,
+[class*="whitepaper"].tour-highlight {
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  background: rgba(102, 126, 234, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 480px) {
+  .footer-item.tour-highlight,
+  .game-button.tour-highlight {
+    transform: scale(1.02);
+  }
+  
+  .circular-progress-wrapper.tour-highlight,
+  .stats-box.tour-highlight {
+    transform: scale(1.01);
+  }
+  
+  .connect-wallet-btn.tour-highlight {
+    transform: scale(1.03);
+  }
+}
+
+/* Accessibility improvements */
+.tour-highlight:focus {
+  outline: 3px solid rgba(102, 126, 234, 0.8);
+  outline-offset: 2px;
+}
+
+/* Animation for feature discovery */
+@keyframes featureDiscovery {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.feature-discovered {
+  animation: featureDiscovery 0.6s ease-out;
+}
+
+/* Dark mode support for feature highlights */
+@media (prefers-color-scheme: dark) {
+  .footer-item.tour-highlight,
+  .game-button.tour-highlight,
+  .circular-progress-wrapper.tour-highlight,
+  .stats-box.tour-highlight {
+    background: rgba(102, 126, 234, 0.2);
+  }
+  
+  .hero-section.tour-highlight,
+  .tokenomics-content.tour-highlight,
+  .whitepaper-content.tour-highlight,
+  [class*="tokenomics"].tour-highlight,
+  [class*="whitepaper"].tour-highlight {
+    background: rgba(102, 126, 234, 0.1);
+  }
+}

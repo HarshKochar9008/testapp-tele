@@ -1,0 +1,250 @@
+.cbp-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cbp-popup-content {
+  background: linear-gradient(135deg, #1a2e1a 0%, #0f1a0f 100%);
+  border: 2px solid #00FF00;
+  border-radius: 20px;
+  position: relative;
+  max-width: 90%;
+  width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 
+    0 0 30px rgba(0, 255, 0, 0.3),
+    0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.cbp-popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: rgba(0, 255, 0, 0.2);
+  color: #00FF00;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.cbp-popup-close:hover {
+  background: rgba(0, 255, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.cbp-popup-header {
+  text-align: center;
+  padding: 30px 25px 20px;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.cbp-popup-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  background: linear-gradient(135deg, #00FF00, #00CC00);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+}
+
+.cbp-popup-icon img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+.cbp-popup-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00FF00;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.cbp-popup-subtitle {
+  font-size: 14px;
+  color: #C7C7C7;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.cbp-popup-body {
+  padding: 25px;
+}
+
+.cbp-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(0, 255, 0, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cbp-step:hover {
+  background: rgba(0, 255, 0, 0.1);
+  border-color: rgba(0, 255, 0, 0.4);
+}
+
+.cbp-step-number {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #00FF00, #00CC00);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 15px;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.cbp-step-content {
+  flex: 1;
+}
+
+.cbp-step-text {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 5px 0;
+}
+
+.cbp-step-subtext {
+  color: #C7C7C7;
+  font-size: 13px;
+  line-height: 1.3;
+  margin: 0;
+  font-style: italic;
+}
+
+.cbp-highlight {
+  background: linear-gradient(135deg, #00FF00, #00CC00);
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.cbp-popup-footer {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.cbp-footer-text {
+  text-align: center;
+}
+
+.cbp-footer-main {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.cbp-footer-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #00FF00, #00CC00);
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+  }
+}
+
+.cbp-badge-text {
+  margin: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .cbp-popup-content {
+    width: 95%;
+    margin: 10px;
+  }
+  
+  .cbp-popup-header {
+    padding: 25px 20px 15px;
+  }
+  
+  .cbp-popup-body {
+    padding: 20px;
+  }
+  
+  .cbp-popup-title {
+    font-size: 18px;
+  }
+  
+  .cbp-step {
+    padding: 12px;
+  }
+  
+  .cbp-step-text {
+    font-size: 14px;
+  }
+}

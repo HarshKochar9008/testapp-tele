@@ -1,0 +1,206 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 0px 20px;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* padding-bottom: 100px; */
+  /* margin-top: 50px; */
+}
+
+.user-greeting p {
+  margin-top: 30px;
+  font-size: var(--heading-4);
+  font-weight: var(--heading-4-weight);
+  text-align: center;
+  color: #fff;
+}
+
+.username-dash {
+  margin-top: 5px;
+  font-size: var(--text-lg);
+  font-weight: var(--heading-5-weight);
+  width: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #00FF00;
+}
+
+.stats-box {
+  width: 100%;
+  max-width: 100%;
+  height: 140px;
+  background-image: url("/public/stats_bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.stats-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 48%;
+  gap: 10px;
+}
+
+.stats-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stats-text .label {
+  font-size: var(--label);
+  font-weight: var(--label-weight);
+  background: linear-gradient(to top,
+      #999999 3%,
+      #ffffff 52%,
+      #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.stats-text .value {
+  font-size: var(--text-lg);
+  font-weight: var(--heading-5-weight);
+  color: #fff;
+}
+
+.stats-divider {
+  height: 75px;
+  /* Adjust based on stats-box height */
+  width: auto;
+  margin: 0 6px;
+}
+
+
+.link-card-wrapper {
+  margin-top: 50px;
+}
+
+.section-title {
+  font-size: var(--heading-3);
+  font-weight: var(--heading-3-weight);
+  color: #fff;
+  margin-top: 20px;
+}
+.bottom-section {
+  position: relative;
+  width: 100%;
+  height: 500px; /* You can adjust this based on your layout */
+  background-image: url('/public/bottom_bg.svg'); /* Update this path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-section .center-image {
+  width: 100px; /* adjust size as needed */
+  height: auto;
+}
+.bottom-section .center-image {
+  width: 80%; /* adjust size as needed */
+  height: auto;
+}
+
+/* Whitepaper Dropdown Styles */
+.whitepaper-dropdown {
+  background: rgba(26, 77, 26, 0.3);
+  border: 1px solid #00FF00;
+  border-radius: 12px;
+  margin-top: 8px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background: rgba(0, 255, 0, 0.1);
+}
+
+.dropdown-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.dropdown-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  opacity: 0.8;
+}
+
+.dropdown-title {
+  font-size: var(--text-md);
+  font-weight: var(--heading-6-weight);
+  color: #00FF00;
+  margin-bottom: 4px;
+}
+
+.dropdown-subtitle {
+  font-size: var(--label);
+  font-weight: var(--caption-weight);
+  color: #C7C7C7;
+  opacity: 0.8;
+}
+
+/* Token Balance Display */
+.token-balance-display {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #C7C7C7;
+  line-height: 1.4;
+}
+
+.token-count {
+  color: #00FF00;
+  font-weight: 600;
+  font-size: 18px;
+}

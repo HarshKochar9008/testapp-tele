@@ -1,0 +1,315 @@
+/* Todo Popup Styles */
+.todo-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.todo-popup-container {
+    background: linear-gradient(135deg, #0a1a0a 0%, #0d2d0d 50%, #0a1a0a 100%);
+    border: 2px solid rgba(0, 200, 83, 0.4);
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+    max-height: 80vh;
+    overflow: hidden;
+    position: relative;
+    animation: slideUp 0.3s ease-out;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 200, 83, 0.2);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.todo-popup-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 200, 83, 0.1) 0%, transparent 70%);
+    animation: glow-pulse 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes glow-pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+/* Header */
+.todo-popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 25px;
+    border-bottom: 1px solid rgba(0, 200, 83, 0.2);
+    background: linear-gradient(135deg, rgba(0, 200, 83, 0.1) 0%, transparent 100%);
+    position: relative;
+    z-index: 1;
+}
+
+.todo-popup-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.todo-icon {
+    font-size: 24px;
+    filter: drop-shadow(0 0 10px rgba(0, 200, 83, 0.5));
+}
+
+.todo-popup-title h3 {
+    margin: 0;
+    font-size: 20px;
+    background: linear-gradient(135deg, #00c853 0%, #90EE90 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+}
+
+.todo-popup-close {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+.todo-popup-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(0, 200, 83, 0.5);
+    color: #00c853;
+    transform: scale(1.1);
+}
+
+/* Content */
+.todo-popup-content {
+    padding: 25px;
+    max-height: 400px;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.todo-popup-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.todo-popup-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.todo-popup-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 200, 83, 0.5);
+    border-radius: 3px;
+}
+
+.todo-popup-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 200, 83, 0.7);
+}
+
+/* Todo List */
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(0, 200, 83, 0.08) 0%, rgba(144, 238, 144, 0.05) 100%);
+    border: 1px solid rgba(0, 200, 83, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.todo-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 200, 83, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.todo-item:hover::before {
+    left: 100%;
+}
+
+.todo-item:hover {
+    border-color: rgba(0, 200, 83, 0.4);
+    background: linear-gradient(135deg, rgba(0, 200, 83, 0.12) 0%, rgba(144, 238, 144, 0.08) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 200, 83, 0.2);
+}
+
+.todo-item-icon {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 200, 83, 0.2);
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.todo-item-content {
+    flex: 1;
+}
+
+.todo-item-content p {
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* No Todos State */
+.no-todos {
+    text-align: center;
+    padding: 40px 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.no-todos-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px rgba(0, 200, 83, 0.3));
+}
+
+.no-todos p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Footer */
+.todo-popup-footer {
+    padding: 20px 25px;
+    border-top: 1px solid rgba(0, 200, 83, 0.2);
+    background: linear-gradient(135deg, rgba(0, 200, 83, 0.05) 0%, transparent 100%);
+    position: relative;
+    z-index: 1;
+}
+
+.todo-popup-ok-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #00c853 0%, #90EE90 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    color: #0a1a0a;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 200, 83, 0.3);
+}
+
+.todo-popup-ok-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 200, 83, 0.4);
+}
+
+.todo-popup-ok-btn:active {
+    transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .todo-popup-overlay {
+        padding: 15px;
+    }
+    
+    .todo-popup-container {
+        max-width: 100%;
+        border-radius: 15px;
+    }
+    
+    .todo-popup-header {
+        padding: 15px 20px;
+    }
+    
+    .todo-popup-title h3 {
+        font-size: 18px;
+    }
+    
+    .todo-popup-content {
+        padding: 20px;
+    }
+    
+    .todo-item {
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .todo-item-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+    
+    .todo-item-content p {
+        font-size: 13px;
+    }
+    
+    .todo-popup-footer {
+        padding: 15px 20px;
+    }
+    
+    .todo-popup-ok-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

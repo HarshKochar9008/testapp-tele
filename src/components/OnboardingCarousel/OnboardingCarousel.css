@@ -1,0 +1,101 @@
+/* Onboarding Carousel Styles */
+.onboarding-carousel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  z-index: 9999;
+}
+
+.slide-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 450px;
+}
+
+.slide-container img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+/* Integrated Next Button */
+.next-button-integrated {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Blauer Nue', sans-serif;
+  background: linear-gradient(135deg, #00FF00, #02d602);
+  color: #000;
+  border: 1px solid #00FF00;
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.3);
+  z-index: 10;
+}
+
+.next-button-integrated:hover {
+  background: linear-gradient(135deg, #02d602, #00FF00);
+  box-shadow: 0 6px 20px rgba(0, 255, 0, 0.4);
+}
+
+.next-button-integrated:active {
+  transform: scale(0.95);
+}
+
+.next-button-integrated img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 480px) {
+  .slide-container {
+    max-width: 350px;
+  }
+  
+  .slide-container img {
+    max-height: 500px;
+  }
+  
+  .next-button-integrated {
+    padding: 10px 16px;
+    font-size: 13px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+/* Animation for slide transitions */
+.slide-container {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

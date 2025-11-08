@@ -1,0 +1,94 @@
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Style for both videos */
+.splash-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Start button styling */
+.start-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  background-color: #01ff02;
+  color: black;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0px 8px 0px #018c01, 0px 10px 20px rgba(0, 255, 0, 0.6);
+  transition: all 0.1s ease-in-out;
+  text-transform: uppercase;
+  animation: bounce 1s infinite alternate ease-in-out;
+}
+
+/* 3D Pressed Effect */
+.start-button:active {
+  transform: translate(-50%, -50%) scale(0.95);
+  box-shadow: 0px 5px 0px #018c01, 0px 6px 15px rgba(0, 255, 0, 0.5);
+}
+
+/* Neon Glow Effect */
+@keyframes glow {
+  0% {
+    box-shadow: 0px 8px 0px #018c01, 0px 10px 20px rgba(0, 255, 0, 0.6);
+  }
+  50% {
+    box-shadow: 0px 12px 0px #018c01, 0px 14px 30px rgba(0, 255, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0px 8px 0px #018c01, 0px 10px 20px rgba(0, 255, 0, 0.6);
+  }
+}
+
+/* Floating/Bouncing Animation */
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+}
+
+/* Button Hover - Extra Glow Effect */
+.start-button:hover {
+  background-color: #02d602;
+  box-shadow: 0px 12px 0px #018c01, 0px 14px 30px rgba(0, 255, 0, 1);
+}
+
+/* Skip button styling */
+.skip-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: rgba(1, 255, 2, 0.8);
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10000;
+  transition: background-color 0.2s ease;
+}
+
+.skip-button:hover {
+  background-color: rgba(2, 214, 2, 0.8);
+}

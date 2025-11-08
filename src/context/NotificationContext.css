@@ -1,0 +1,96 @@
+.notification-modal {
+  text-align: center;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.notification-icon {
+  margin-bottom: 20px;
+  font-size: 48px;
+}
+
+.coming-soon-icon {
+  animation: pulse 2s infinite;
+}
+
+.info-icon {
+  color: #007bff;
+}
+
+.success-icon {
+  color: #28a745;
+}
+
+.error-icon {
+  color: #dc3545;
+}
+
+.notification-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.notification-message {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  color: #666;
+}
+
+.notification-button {
+  background: linear-gradient(90deg, #00FF26 0%, #00CC1F 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 38, 0.3);
+}
+
+.notification-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 255, 38, 0.4);
+}
+
+.notification-button:active {
+  transform: translateY(0);
+}
+
+/* Animation for coming soon icon */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .notification-modal {
+    padding: 15px;
+  }
+  
+  .notification-title {
+    font-size: 20px;
+  }
+  
+  .notification-message {
+    font-size: 14px;
+  }
+  
+  .notification-button {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+} 

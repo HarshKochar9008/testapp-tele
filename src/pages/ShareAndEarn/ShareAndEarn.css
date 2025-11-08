@@ -1,0 +1,531 @@
+.share-earn-page {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 0px 20px;
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Share & Earn Header */
+.share-earn-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.share-earn-header h1 {
+    font-size: 28px;
+    color: #fff;
+    margin: 0;
+}
+
+.share-earn-highlight {
+    color: #00FF00;
+}
+
+/* Informational Text Section */
+.info-section {
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.info-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.info-highlight {
+    color: #00FF00;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+.info-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin: 25px 0 15px 0;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.info-description {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* Memes Section */
+.memes-wrapper {
+    margin-bottom: 20px;
+}
+
+/* Share & Earn Sections */
+.share-earn-section {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 12px 0px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.section-icon {
+    width: 32px;
+    height: 32px;
+    background: #00FF00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-icon img {
+    width: 18px;
+    height: 18px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.check-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Share & Earn Cards */
+.share-earn-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.share-earn-card {
+    display: flex;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 12px;
+}
+
+.share-earn-card:last-child {
+    margin-bottom: 0;
+}
+
+.card-left {
+    flex: 1;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card-center {
+    flex: 1;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+}
+
+.card-right {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    color: #00FF00;
+    font-size: 14px;
+}
+
+/* Share Button */
+.share-button {
+    width: 163px;
+    height: 40px;
+    background: linear-gradient(180deg, #0a4d0a 0%, #0d5a0d 50%, #0a4d0a 100%);
+    border: 2px solid #00FF00;
+    color: #ffffff;
+    padding: 0;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6), 0 0 40px rgba(0, 255, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+
+.share-button:hover {
+    background: linear-gradient(180deg, #0d5a0d 0%, #0f6b0f 50%, #0d5a0d 100%);
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.8), 0 0 60px rgba(0, 255, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.share-button:active {
+    transform: translateY(0);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7), 0 0 30px rgba(0, 255, 0, 0.3);
+}
+
+/* Referral Stats Section */
+.referral-stats-section {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(26, 77, 26, 0.3);
+    border: 1px solid #00FF00;
+    border-radius: 12px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 16px 12px;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    border-radius: 8px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00FF00;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #C7C7C7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Bottom Section */
+.bottom-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('/public/bottom_bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-section .center-image {
+    width: 80%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .share-earn-page {
+        padding: 0px 15px;
+    }
+    
+    .info-title {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    
+    .info-title .info-highlight {
+        font-size: 20px;
+    }
+    
+    .info-subtitle {
+        font-size: 16px;
+        margin: 20px 0 12px 0;
+    }
+    
+    .info-subtitle .info-highlight {
+        font-size: 16px;
+    }
+    
+    .info-description {
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 0 0 12px 0;
+    }
+    
+    .share-earn-header h1 {
+        font-size: 20px;
+    }
+    
+    .header-left {
+        font-size: 14px;
+    }
+    
+    .info-text p {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    
+    .share-earn-card {
+        flex-direction: row;
+        gap: 6px;
+        text-align: center;
+        padding: 10px 12px;
+    }
+    
+    .card-left {
+        text-align: left;
+    }
+    
+    .card-center {
+        text-align: center;
+    }
+    
+    .card-right {
+        text-align: right;
+    }
+    
+    .share-button {
+        font-size: 12px;
+        width: 140px;
+        height: 36px;
+    }
+}
+
+/* Specific breakpoint for 479x648 dimension */
+@media (max-width: 500px) and (min-width: 450px) {
+    .share-earn-page {
+        padding: 0px 15px;
+    }
+    
+    .info-title {
+        font-size: 19px;
+        margin-bottom: 16px;
+    }
+    
+    .info-title .info-highlight {
+        font-size: 19px;
+    }
+    
+    .info-subtitle {
+        font-size: 16px;
+        margin: 20px 0 12px 0;
+    }
+    
+    .info-subtitle .info-highlight {
+        font-size: 16px;
+    }
+    
+    .info-description {
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 0 0 12px 0;
+    }
+    
+    .info-section {
+        padding: 0 12px;
+        margin-bottom: 28px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .share-earn-page {
+        padding: 0px 12px;
+    }
+    
+    .info-title {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+    
+    .info-title .info-highlight {
+        font-size: 18px;
+    }
+    
+    .info-subtitle {
+        font-size: 15px;
+        margin: 18px 0 10px 0;
+    }
+    
+    .info-subtitle .info-highlight {
+        font-size: 15px;
+    }
+    
+    .info-description {
+        font-size: 12px;
+        line-height: 1.4;
+        margin: 0 0 10px 0;
+    }
+    
+    .info-section {
+        padding: 0 10px;
+        margin-bottom: 25px;
+    }
+}
+
+/* New Share Buttons Styles */
+.share-buttons-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    border: 1px solid #00FF00;
+}
+
+.share-buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.share-button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.share-button.telegram {
+    background: #0088cc;
+    color: white;
+}
+
+.share-button.youtube {
+    background: #ff0000;
+    color: white;
+}
+
+.share-button.instagram {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    color: white;
+}
+
+.share-button.copy {
+    background: #00FF00;
+    color: black;
+}
+
+.share-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
+}
+
+.referral-link-display {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.link-label {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.link-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.referral-link-input {
+    flex: 1;
+    padding: 10px 12px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #555;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.referral-link-input:focus {
+    outline: none;
+    border-color: #00FF00;
+}
+
+.copy-link-btn {
+    padding: 10px 12px;
+    background: #00FF00;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.copy-link-btn:hover {
+    background: #00cc00;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments for share buttons */
+@media (max-width: 768px) {
+    .share-buttons-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .share-button {
+        padding: 14px 16px;
+        font-size: 16px;
+    }
+    
+    .referral-link-input {
+        font-size: 11px;
+    }
+} 

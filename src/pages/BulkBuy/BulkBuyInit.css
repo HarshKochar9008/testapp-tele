@@ -1,0 +1,383 @@
+.bulk-buy-page {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 0px 20px;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  background-color: #1a1a1a;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Hero Section */
+.bulk-buy-hero {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.bulk-buy-hero-content h1 {
+  font-size: 36px;
+  color: #fff;
+  margin: 0 0 15px 0;
+  font-weight: 800;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.bulk-buy-highlight {
+  color: #66FF00;
+  text-shadow: 0 0 30px rgba(102, 255, 0, 0.6);
+}
+
+.bulk-buy-subtitle {
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Form Section */
+.bulk-buy-form-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bulk-buy-input-group {
+  margin-bottom: 25px;
+}
+
+.bulk-buy-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00FF00;
+  margin-bottom: 8px;
+}
+
+.bulk-buy-label-icon {
+  font-size: 20px;
+}
+
+.bulk-buy-hint {
+  font-size: 13px;
+  color: #fff;
+  opacity: 0.7;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.bulk-buy-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bulk-buy-input {
+  width: 100%;
+  padding: 14px 45px 14px 16px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(0, 255, 0, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.bulk-buy-input:focus {
+  outline: none;
+  border-color: #00FF00;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.bulk-buy-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bulk-buy-toggle-visibility {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.2s;
+}
+
+.bulk-buy-toggle-visibility:hover {
+  transform: scale(1.1);
+}
+
+/* Placement Options */
+.bulk-buy-placement-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.bulk-buy-placement-option {
+  display: block;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(0, 255, 0, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.bulk-buy-placement-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bulk-buy-placement-option:hover {
+  border-color: rgba(0, 255, 0, 0.5);
+  background: rgba(0, 255, 0, 0.05);
+}
+
+.bulk-buy-placement-option.active {
+  border-color: #00FF00;
+  background: rgba(0, 255, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.bulk-buy-placement-option.active::before {
+  content: "✓";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  background: #00FF00;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.placement-option-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.placement-option-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00FF00;
+}
+
+.placement-option-desc {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+.placement-option-visual {
+  font-size: 13px;
+  color: #fff;
+  opacity: 0.6;
+  font-family: monospace;
+  margin-top: 8px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+
+/* Error Message */
+.bulk-buy-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 0, 0, 0.1);
+  border: 2px solid rgba(255, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 12px;
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.bulk-buy-error-icon {
+  font-size: 20px;
+}
+
+/* Submit Button */
+.bulk-buy-submit-btn {
+  width: 100%;
+  height: 55px;
+  background: linear-gradient(180deg, #0a4d0a 0%, #0d5a0d 50%, #0a4d0a 100%);
+  border: 2px solid #00FF00;
+  color: #ffffff;
+  padding: 0;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6), 0 0 40px rgba(0, 255, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.bulk-buy-submit-btn:hover:not(:disabled) {
+  background: linear-gradient(180deg, #0d5a0d 0%, #0f6b0f 50%, #0d5a0d 100%);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.8), 0 0 60px rgba(0, 255, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.bulk-buy-submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.7), 0 0 30px rgba(0, 255, 0, 0.3);
+}
+
+.bulk-buy-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Info Box */
+.bulk-buy-info-box {
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.bulk-buy-info-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #00FF00;
+  margin-bottom: 12px;
+}
+
+.bulk-buy-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bulk-buy-info-list li {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  opacity: 0.9;
+}
+
+.bulk-buy-info-list li:before {
+  content: "•";
+  color: #00FF00;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.bulk-buy-info-list li:last-child {
+  margin-bottom: 0;
+}
+
+.bulk-buy-info-list li strong {
+  color: #00FF00;
+}
+
+/* Bottom Section */
+.bottom-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url('/public/bottom_bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-section .center-image {
+  width: 80%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bulk-buy-page {
+    padding: 0px 12px;
+  }
+
+  .bulk-buy-hero h1 {
+    font-size: 24px;
+  }
+
+  .bulk-buy-subtitle {
+    font-size: 14px;
+  }
+
+  .bulk-buy-form-section {
+    padding: 20px;
+  }
+
+  .bulk-buy-label {
+    font-size: 14px;
+  }
+
+  .bulk-buy-hint {
+    font-size: 12px;
+  }
+
+  .bulk-buy-input {
+    padding: 12px 40px 12px 14px;
+    font-size: 14px;
+  }
+
+  .placement-option-title {
+    font-size: 16px;
+  }
+
+  .placement-option-desc {
+    font-size: 13px;
+  }
+
+  .placement-option-visual {
+    font-size: 11px;
+  }
+
+  .bulk-buy-submit-btn {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .bulk-buy-info-list li {
+    font-size: 12px;
+  }
+
+  .bottom-section {
+    height: 300px;
+  }
+}
+

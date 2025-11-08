@@ -1,0 +1,305 @@
+@font-face {
+  font-family: 'Blauer Nue';
+  src: url('../public/fonts/blauer-nue-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'Blauer Nue';
+}
+.App {
+  text-align: center;
+}
+
+/* Ensure Routes container takes available space */
+.App > div {
+  flex: 1;
+  overflow-y: auto;
+}
+.app{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* Mobile-first layout */
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  /* Add bottom padding to account for fixed footer */
+  padding-bottom: 70px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* App.css - optional global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #121a14;
+  /* Mobile-first optimizations */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  overflow-x: hidden;
+}
+
+.loader-container {
+  position: fixed; /* Ensures it stays centered */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* Adds a slight overlay */
+  z-index: 1000; /* Keeps it above all other elements */
+}
+
+.loader {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #02FF06; /* Green */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+#zsiq_float {
+  bottom: 70px !important;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Ripple base styles for all a and button elements */
+a, button {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+a::after,
+button::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2); /* Ripple color */
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0.5;
+  pointer-events: none;
+  transition: transform 0.4s ease-out, opacity 0.8s ease-out;
+  z-index: -1;
+}
+
+/* On tap */
+a:active::after,
+button:active::after {
+  transform: scale(3);
+  opacity: 0;
+}
+
+/* Position ripple at the center */
+a::after,
+button::after {
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+/* ===== MOBILE-FIRST RESPONSIVE DESIGN ===== */
+
+/* Force mobile layout for all screen sizes */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Ensure all containers respect mobile boundaries */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mobile-specific optimizations */
+@media screen and (max-width: 768px) {
+  .app {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    /* Adjust padding for mobile footer */
+    padding-bottom: 65px;
+  }
+  
+  /* Prevent horizontal scrolling */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  /* Ensure all content fits within mobile viewport */
+  .App > div {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+/* Force mobile layout even on desktop */
+@media screen and (min-width: 769px) {
+  .app {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Center the mobile layout on larger screens */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .app {
+    width: 100%;
+    max-width: 480px; /* Mobile width */
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    min-height: 100vh;
+  }
+}
+
+/* Telegram WebApp specific styles */
+.telegram-webapp {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Prevent zoom on double tap */
+* {
+  touch-action: manipulation;
+}
+
+/* Ensure touch targets are at least 44px */
+/* button, a, input, select, textarea {
+  min-height: 44px;
+  min-width: 44px;
+} */
+
+/* Mobile-optimized text */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: clamp(16px, 4vw, 24px);
+    line-height: 1.2;
+  }
+  
+  p, span, div {
+    font-size: clamp(12px, 3vw, 16px);
+    line-height: 1.4;
+  }
+}
+
+/* Prevent text selection on mobile */
+@media screen and (max-width: 768px) {
+  * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  input, textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+}
+
+/* ===== FOOTER LAYOUT ADJUSTMENTS ===== */
+
+/* Ensure content doesn't get hidden behind footer */
+.page-content {
+  min-height: calc(100vh - 70px);
+  padding-bottom: 20px;
+}
+
+/* Mobile footer adjustment */
+@media screen and (max-width: 768px) {
+  .page-content {
+    min-height: calc(100vh - 65px);
+    padding-bottom: 15px;
+  }
+}
+
+/* Specific adjustments for pages with fixed content */
+.buy-page,
+.dashboard-page,
+.earnings-page {
+  padding-bottom: 80px; /* Extra padding for footer */
+}
+
+@media screen and (max-width: 768px) {
+  .buy-page,
+  .dashboard-page,
+  .earnings-page {
+    padding-bottom: 75px; /* Mobile footer height + extra padding */
+  }
+}
+

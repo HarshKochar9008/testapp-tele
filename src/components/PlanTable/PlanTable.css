@@ -1,0 +1,192 @@
+.plan-table-container {
+    margin: 3px 0;
+    overflow-x: auto;
+  }
+  
+  .plan-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    font-size: 10px;
+
+  }
+  
+  .plan-table th,
+  .plan-table td {
+    padding: 12px;
+    border: 1px solid #444;
+    text-align: center;
+  }
+  
+  .status-circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  
+  .status-completed {
+    background-color: rgba(0, 200, 83, 0.2);
+    border-left: 3px solid #00c853;
+  }
+  
+  .status-active {
+    background-color: rgba(255, 165, 0, 0.2);
+    border-left: 3px solid #ffa500;
+  }
+  
+  .status-eligible {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid #666;
+  }
+  
+  .status-remaining {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid #666;
+  }
+
+  .status-surrendered {
+    background-color: rgba(220, 20, 60, 0.2);
+    border-left: 3px solid #dc143c;
+    color: #ff6b6b;
+  }
+
+  .status-surrendered td {
+    color: #ff6b6b !important;
+    font-weight: bold;
+  }
+
+  .status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .status-icon {
+    font-size: 16px;
+    min-width: 20px;
+    text-align: center;
+  }
+
+  .surrender-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-left: 8px;
+  }
+
+  .surrender-btn {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 80px;
+  }
+
+  .flushed-btn {
+    background-color: #dc143c;
+    color: white;
+  }
+
+  .flushed-btn:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+  }
+
+  .nft-btn {
+    background-color: #ff6b6b;
+    color: white;
+  }
+
+  .nft-btn:hover {
+    background-color: #ff5252;
+    transform: scale(1.05);
+  }
+  
+  .plan-table th{
+    background-color: #00c853;
+  }
+
+/* Accordion styles */
+.accordion-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+  width: 16px;
+  height: 16px;
+}
+
+.arrow-icon.rotated {
+  transform: rotate(90deg);
+}
+
+.accordion-row {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.accordion-row.collapsed {
+  max-height: 0;
+  opacity: 0;
+  display: none;
+}
+
+.accordion-row.expanded {
+  max-height: 100px;
+  opacity: 1;
+  display: table-row;
+}
+
+.legend-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    padding: 20px 0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-text {
+    font-size: 16px;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.legend-text.active {
+    color: #E2B143;
+}
+
+.legend-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.legend-icon.remaining {
+    background-color: #fff;
+}
+
+.legend-icon.active {
+    background-color: #ffa500;
+}
+
+.legend-icon.completed {
+    background-color: #00c853;
+}  

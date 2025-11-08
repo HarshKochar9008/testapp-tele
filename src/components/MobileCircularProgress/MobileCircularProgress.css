@@ -1,0 +1,71 @@
+.circular-progress-wrapper {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto; /* 🔥 this centers it inside dashboard-page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .gradient-button {
+    padding: 6px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    border: 2px solid #00FF26;
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgba(0, 255, 38, 0.59) 0%, rgba(0, 255, 0, 0) 100%);
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+
+/* Progress container styles */
+.progress-container {
+  position: relative;
+}
+
+/* Overlay styles */
+.progress-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.progress-overlay:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.02);
+}
+
+.overlay-content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.coming-soon-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #00FF26;
+  text-shadow: 0 0 10px rgba(0, 255, 38, 0.5);
+}
+
+.launch-message {
+  font-size: 14px;
+  color: #C7C7C7;
+  opacity: 0.9;
+}

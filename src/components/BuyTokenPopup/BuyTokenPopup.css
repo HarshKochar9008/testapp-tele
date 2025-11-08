@@ -1,0 +1,112 @@
+.buy-token-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.buy-token-popup-content {
+  background: linear-gradient(135deg, #1a2e1a 0%, #0f1a0f 100%);
+  border: 2px solid #00FF00;
+  border-radius: 20px;
+  position: relative;
+  max-width: 90%;
+  width: 400px;
+  padding: 30px;
+  box-shadow: 
+    0 0 30px rgba(0, 255, 0, 0.3),
+    0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.buy-token-popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: rgba(0, 255, 0, 0.2);
+  color: #00FF00;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.buy-token-popup-close:hover {
+  background: rgba(0, 255, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.buy-token-popup-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.buy-token-popup-main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.buy-token-button {
+  background: linear-gradient(135deg, #00FF00, #00CC00);
+  color: #000;
+  border: none;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+}
+
+.buy-token-button:hover {
+  background: linear-gradient(135deg, #00CC00, #00FF00);
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.6);
+}
+
+.buy-token-button:active {
+  transform: scale(0.98);
+}
+
