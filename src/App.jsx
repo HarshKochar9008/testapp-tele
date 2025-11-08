@@ -2,17 +2,17 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import axios from "axios";
 import Header from "./components/Header/Header";
-// import Dashboard from "./pages/Dashboard/Dashboard";
-// import StoryViewer from "./components/StoryViewer/StoryViewer";
-// import Plan from "./pages/Plan/Plan";
-// import Plan2 from "./pages/Plan/Plan2";
-// import Tokenomics from "./pages/Tokenomics/Tokenomics";
-// import Terms from "./pages/Terms/Terms";
-// import Terms2 from "./pages/Terms/Terms2";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import StoryViewer from "./components/StoryViewer/StoryViewer";
+import Plan from "./pages/Plan/Plan";
+import Plan2 from "./pages/Plan/Plan2";
+import Tokenomics from "./pages/Tokenomics/Tokenomics";
+import Terms from "./pages/Terms/Terms";
+import Terms2 from "./pages/Terms/Terms2";
 import PVC from "./pages/PVC/PVC";
 // import Buy from "./pages/Buy/Buy";
 // import BulkBuy from "./pages/BulkBuy/BulkBuy";
-// import Earnings from "./pages/Earnings/Earnings";
+import Earnings from "./pages/Earnings/Earnings";
 // import Withdraw from "./pages/Withdraw/Withdraw";
 import ShareAndEarn from "./pages/ShareAndEarn/ShareAndEarn";
 // import Claim from "./pages/Claim/Claim";
@@ -27,7 +27,7 @@ import { AppKitProvider } from "./AppKitProvider";
 import { TelegramProvider, useTelegram } from "./context/TelegramContext";
 import { NotificationProvider } from "./context/NotificationContext";
 import { AUTH_USER, CHECK_USER_TG_CHANNEL_JOINED, GET_USER, GET_UNREAD_COUNT } from "./services/Api";
-// import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 const BACKEND_URL =
   process.env.REACT_APP_BACKEND_URL ||
@@ -437,7 +437,7 @@ function App() {
           fetchUserData={fetchUserData} />} /> */}
 
         {/* <Route path = "/plan-old" element={<Plan userData={userData} />} /> */}
-        {/* <Route path = "/plan" element={<Plan2 userData={userData} />} /> */}
+        <Route path = "/plan" element={<Plan2 userData={userData} />} />
         {/* <Route path = "/story" element={<StoryViewer images={images} />} /> */}
         {/* <Route path = "/tokenomics" element={<Tokenomics userData={userData} />} /> */}
         {/* <Route path = "/terms" element={<Terms userData={userData} />} /> */}
@@ -445,7 +445,7 @@ function App() {
         <Route path = "/pvc" element={<PVC userData={userData} />} />
         {/* <Route path = "/buy" element={<Buy userData={userData} />} /> */}
         {/* <Route path = "/bulk-buy" element={<BulkBuy userData={userData} token={token} />} /> */}
-        {/* <Route path = "/earnings" element={<Earnings userData={userData} />} />  */}
+        <Route path = "/earnings" element={<Earnings userData={userData} />} /> 
         {/* <Route path = "/withdraw" element={<Withdraw userData={userData} />} />  */}
         <Route path = "/share-and-earn" element={<ShareAndEarn userData={userData} />} /> 
         {/* <Route path = "/claim" element={<Claim userData={userData} />} /> */}
@@ -453,10 +453,10 @@ function App() {
         {/* Default route to PVC */}
         <Route path = "/" element={<PVC userData={userData} />} />
       </Routes>
-      {/* {!hideHeaderAndNavbar && location.pathname !== "/dashboard" && (
-        <Footer fuelPercentage={fuelPercentage} spinWheelTaskId={spinWheelTaskId} />
-      )} */}
-      {/* {location.pathname === "/dashboard" && <Footer />} */}
+      {!hideHeaderAndNavbar && location.pathname !== "/dashboard" && (
+        <Footer />
+      )}
+      {location.pathname === "/dashboard" && <Footer />}
 
       {/* Feature Walkthrough - shows on top of existing content */}
       {/* {showFeatureWalkthrough && (

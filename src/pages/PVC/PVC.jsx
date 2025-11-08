@@ -962,7 +962,7 @@ export default function PVC({ userData }) {
                           }}
                           title={referral.username.startsWith("User_") ? "User hasn't set up Telegram username" : "Send message"}
                         >
-                          💬
+                          <MessageSquareText/>
                         </span>
                         {referral.username}
                       </div>
